@@ -1,4 +1,80 @@
-nav{
+:root {
+    --primario: #7C3AED;
+    --primario-claro: #8B5CF6;
+    --oscuro: #0F172A;
+    --navbar: #111827;
+    --blanco: #FFFFFF;
+    --fondo: #F8FAFC;
+    --texto: #1E293B;
+    --texto-secundario: #64748B;
+    --titulos: 'Space Grotesk', sans-serif;
+    --subtitulos: 'Inter', sans-serif;
+}
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body{
+    font-size: 16px;
+    font-family: var(--subtitulos);
+    color: #1E293B;
+}
+.title {
+    font-size: 2.6rem;
+    color: var(--texto-secundario);
+    font-family: var(--titulos);
+}
+.subtitle{
     text-align: center;
-    color: black;
+    font-family: var(--subtitulos);
+    color: var(--blanco);
+}
+
+.container{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+.nav-bg{
+    background-color: var(--navbar);
+}
+.main-navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media (min-width: 768px) {
+    .main-navigation {
+        flex-direction: row;
+        justify-content: space-between;
+        
+    }
+}
+.main-navigation a {
+    display: block;
+    text-align: center;
+    color: var(--primario-claro);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem;
+}
+.main-navigation a:hover{
+    background-color: var(--primario);
+    color: var(--blanco);
+}
+.front-page {
+    background-image: url(../img/portada.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    position: relative;
+}
+.content-front-page {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
 }
